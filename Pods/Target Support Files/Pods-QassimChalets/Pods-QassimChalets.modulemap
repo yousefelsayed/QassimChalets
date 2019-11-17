@@ -1,0 +1,6 @@
+framework module Pods_QassimChalets {
+  umbrella header "Pods-QassimChalets-umbrella.h"
+
+  export *
+  module * { export * }
+}
