@@ -10,6 +10,40 @@ import UIKit
 import DropDown
 import DatePickerDialog
 class HomeViewController:  PickerController {
+    @IBOutlet weak var container: UIView!
+       {
+           didSet
+           {
+               self.container.layer.shadowColor = UIColor.rgb(5,0,0,0.13).cgColor
+                      self.container.layer.shadowRadius = 9
+                      self.container.layer.shadowOpacity = 1
+                      self.container.layer.shadowOffset = CGSize(width: 0, height: 5)
+           }
+          
+       }
+       @IBOutlet weak var footerContainer: UIView!
+          {
+              didSet{
+                        
+                  
+                  
+                  self.footerContainer.layer.shadowColor = UIColor.rgb(5,0,0,0.13).cgColor
+                  self.footerContainer.layer.shadowRadius = 9
+                  self.footerContainer.layer.shadowOpacity = 1
+                  self.footerContainer.layer.shadowOffset = CGSize(width: 0, height: 5)
+              }
+          }
+          @IBOutlet weak var middleContainer: UIView!
+             {
+                   didSet{
+
+                           self.middleContainer.layer.shadowColor = UIColor.rgb(5,0,0,0.13).cgColor
+                           self.middleContainer.layer.shadowRadius = 9
+                           self.middleContainer.layer.shadowOpacity = 1
+                           self.middleContainer.layer.shadowOffset = CGSize(width: 0, height: 9)
+                       }
+             } 
+    
     let pickerView: UIDatePicker = {
                                   let view = UIDatePicker()
                               view.layer.shadowColor = UIColor.rgb(5, 0, 0, 0.13).cgColor
@@ -17,10 +51,28 @@ class HomeViewController:  PickerController {
                                   view.layer.shadowOffset = CGSize(width: 0, height: 9)
                                   view.layer.shadowOpacity = 1
                                   view.backgroundColor = .white
+        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 44))
+            toolBar.layer.backgroundColor = UIColor.rgb(239, 178, 10).cgColor
+            toolBar.layer.borderColor = UIColor.rgb(239, 178, 10,0.13).cgColor
+            let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+            let cancelBarButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action:
+            #selector(cancelBtnClicked(_:)))
+        let doneBarButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(HomeViewController.donePressed))
+        
+            toolBar.setItems([cancelBarButton, flexibleSpace, doneBarButton], animated: false)
 
+        view.addSubview(toolBar)
              return view
                    }()
-  
+    @objc func donePressed(sender: UIBarButtonItem) {
+          
+        textSearch?.resignFirstResponder()
+          
+      }
+   @objc func cancelBtnClicked(_ button: UIBarButtonItem?)
+  {
+    textSearch?.resignFirstResponder()
+    }
    
     @IBOutlet weak var searchBtn: UIButton!
        {
@@ -30,15 +82,31 @@ class HomeViewController:  PickerController {
            }
        }
 
-       @objc func datePickerValueChanged(sender:UIDatePicker) {
-
+//    @IBOutlet weak var inDate: UITextField!
+//    {
+//        didSet{
+//            inDate.layer.borderColor = borderColor.cgColor
+//                          inDate.layer.cornerRadius = 10
+//                          inDate.layer.borderWidth = 1
+//                          inDate.layer.backgroundColor = backgroundColor.cgColor
+//                          imageView.image = image
+//                          inDate.rightView = imageView
+//                          inDate.rightViewMode = .always
+//        }
+//    }
+   
+  
+    @objc func datePickerValueChanged(sender:UIDatePicker) {
+        textSearch?.resignFirstResponder()
+         //pickerView.isHidden = true
+        
            let dateFormatter = DateFormatter()
 
            dateFormatter.dateStyle = DateFormatter.Style.medium
 
            dateFormatter.timeStyle = DateFormatter.Style.none
-
-        //   textSearch.text = dateFormatter.string(from: sender.date)
+        print(dateFormatter.string(from: sender.date))
+           textSearch.text = dateFormatter.string(from: sender.date)
 
        }
        let borderColor = UIColor(displayP3Red: 239.0/255.0, green: 178.0/255.0, blue: 10.0/255.0, alpha: 1.0)
@@ -71,8 +139,23 @@ class HomeViewController:  PickerController {
                cityText.layer.borderColor = borderColor.cgColor
            }
        }
-      
+      func assignbackground(){
+          let background = UIImage(named: "map")
+
+          var imageView : UIImageView!
+          imageView = UIImageView(frame: footerContainer.bounds)
+        imageView.contentMode =  UIView.ContentMode.scaleAspectFit
+          imageView.clipsToBounds = true
+          imageView.image = background
+          imageView.center = footerContainer.center
+          footerContainer.addSubview(imageView)
+          self.footerContainer.sendSubviewToBack(imageView)
+      }
+   
+    
     @IBAction func dateOutTapped(_ sender: UITextField!) {
+        
+        pickerView.addTarget(self, action: #selector(datePickerValueChanged(sender:)), for: .valueChanged)
            pickerView.isHidden = false
        }
     override func viewDidLoad() {
@@ -83,14 +166,17 @@ class HomeViewController:  PickerController {
                     view.addSubview(pickerView)
                     pickerView.centerInSuperview()
     pickerView.isHidden = true
+     
+        
     }
    
     let dropdown = DropDown()
     let dropDownView = UIView()
     let imageView = UIImageView(frame: CGRect(x: 119, y: 418, width: 15, height: 14))
     var image = UIImage(named: "search")
+    var imageMap = UIImage(named: "map")
     @IBOutlet weak var typeButton: UIButton!
-    @IBOutlet weak var container: UIView!
+   
     let customColor = UIColor(displayP3Red: 239.0/255.0, green: 178.0/255.0, blue: 10.0/255.0, alpha: 1.0)
     let backgroundColor = UIColor(displayP3Red: 242.0/255.0, green: 242.0/255.0, blue: 242.0/255.0, alpha: 1.0)
     @IBAction func typeTapped(_ sender: Any) {
@@ -105,5 +191,16 @@ class HomeViewController:  PickerController {
   DropDown.appearance().setupCornerRadius(10)
   dropdown.show()
     }
+    
+        @objc func doneButtonPressed(sender:UIDatePicker) {
+     let dateFormatter = DateFormatter()
+
+            dateFormatter.dateStyle = DateFormatter.Style.medium
+
+            dateFormatter.timeStyle = DateFormatter.Style.none
+
+            textSearch.text = dateFormatter.string(from: sender.date)
+             self.textSearch.resignFirstResponder()
+        }
     
 }

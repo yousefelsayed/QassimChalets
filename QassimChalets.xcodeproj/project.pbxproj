@@ -11,11 +11,11 @@
 		CA15ACA92370A148004DD44E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA15ACA82370A148004DD44E /* AppDelegate.swift */; };
 		CA15ACAB2370A148004DD44E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA15ACAA2370A148004DD44E /* SceneDelegate.swift */; };
 		CA15ACAD2370A148004DD44E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA15ACAC2370A148004DD44E /* HomeViewController.swift */; };
-		CA15ACB02370A148004DD44E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA15ACAE2370A148004DD44E /* Main.storyboard */; };
 		CA15ACB22370A14D004DD44E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA15ACB12370A14D004DD44E /* Assets.xcassets */; };
 		CA15ACB52370A14D004DD44E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA15ACB32370A14D004DD44E /* LaunchScreen.storyboard */; };
 		CA15ACBE2370AEE9004DD44E /* logoSh.png in Resources */ = {isa = PBXBuildFile; fileRef = CA15ACBD2370AEE9004DD44E /* logoSh.png */; };
 		CA15ACC2237DA0A6004DD44E /* PickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA15ACC1237DA0A6004DD44E /* PickerController.swift */; };
+		CA939A232385843200B375C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA15ACAE2370A148004DD44E /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -184,7 +184,7 @@
 				CA15ACB52370A14D004DD44E /* LaunchScreen.storyboard in Resources */,
 				CA15ACBE2370AEE9004DD44E /* logoSh.png in Resources */,
 				CA15ACB22370A14D004DD44E /* Assets.xcassets in Resources */,
-				CA15ACB02370A148004DD44E /* Main.storyboard in Resources */,
+				CA939A232385843200B375C6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
