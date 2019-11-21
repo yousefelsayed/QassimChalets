@@ -186,6 +186,15 @@
                                                             <action selector="searchBtnTapped:" destination="j0Y-XB-jpq" eventType="touchUpInside" id="une-Xv-YbB"/>
                                                         </connections>
                                                     </button>
+                                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="تاريخ الدخول" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dlj-42-Iyy">
+                                                        <rect key="frame" x="203" y="225" width="117.66666666666666" height="36"/>
+                                                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="36" id="lOU-1u-hUI"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
@@ -198,8 +207,11 @@
                                                     <constraint firstItem="Ehz-f3-6BH" firstAttribute="top" secondItem="5ke-S7-yFQ" secondAttribute="bottom" constant="18" id="IBY-gf-KPP"/>
                                                     <constraint firstAttribute="trailing" secondItem="DPi-wT-nKh" secondAttribute="trailing" constant="35" id="JJB-AC-HLZ"/>
                                                     <constraint firstAttribute="trailing" secondItem="Ehz-f3-6BH" secondAttribute="trailing" constant="18" id="JST-pl-k0g"/>
+                                                    <constraint firstItem="dlj-42-Iyy" firstAttribute="top" secondItem="J4B-TU-WFl" secondAttribute="top" constant="225" id="LH7-2u-0Cz"/>
+                                                    <constraint firstItem="dlj-42-Iyy" firstAttribute="leading" secondItem="J4B-TU-WFl" secondAttribute="leading" constant="203" id="LZk-gb-bmV"/>
                                                     <constraint firstItem="5ke-S7-yFQ" firstAttribute="top" secondItem="J4B-TU-WFl" secondAttribute="top" constant="8" id="Nfu-4t-Ath"/>
                                                     <constraint firstItem="pOh-oa-HP6" firstAttribute="top" secondItem="J4B-TU-WFl" secondAttribute="top" constant="296" id="PQJ-N8-V4j"/>
+                                                    <constraint firstAttribute="trailing" secondItem="dlj-42-Iyy" secondAttribute="trailing" constant="17.5" id="Ryh-pW-zeg"/>
                                                     <constraint firstItem="eL3-TH-sgQ" firstAttribute="top" secondItem="J4B-TU-WFl" secondAttribute="top" constant="89" id="Tdb-Qj-eam"/>
                                                     <constraint firstItem="pOh-oa-HP6" firstAttribute="top" secondItem="J4B-TU-WFl" secondAttribute="top" constant="296" id="bdY-sK-0al"/>
                                                     <constraint firstAttribute="width" constant="336" id="bgI-8i-MlS"/>
@@ -252,32 +264,26 @@
                                                     <constraint firstAttribute="width" constant="336" id="xSi-rf-5n7"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ruR-fx-XSo" userLabel="Footer">
-                                                <rect key="frame" x="19" y="769" width="336" height="139"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map" translatesAutoresizingMaskIntoConstraints="NO" id="CXb-Zn-Mub">
-                                                        <rect key="frame" x="10" y="10" width="316" height="119"/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ابحث عن جميع المنتجعات القريبة منك بضغطة زر" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Q8-BW-2Xw">
-                                                        <rect key="frame" x="50" y="21" width="265" height="75"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map" translatesAutoresizingMaskIntoConstraints="NO" id="01i-53-5EO">
+                                                <rect key="frame" x="20" y="769" width="336" height="157"/>
+                                                <color key="backgroundColor" red="0.73333333333333328" green="0.73333333333333328" blue="0.73333333333333328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="CXb-Zn-Mub" firstAttribute="leading" secondItem="ruR-fx-XSo" secondAttribute="leading" constant="10" id="0s7-ya-edl"/>
-                                                    <constraint firstAttribute="trailing" secondItem="CXb-Zn-Mub" secondAttribute="trailing" constant="10" id="Hez-k3-6DN"/>
-                                                    <constraint firstItem="6Q8-BW-2Xw" firstAttribute="leading" secondItem="ruR-fx-XSo" secondAttribute="leading" constant="50" id="Q5b-Bu-IjW"/>
-                                                    <constraint firstItem="6Q8-BW-2Xw" firstAttribute="top" secondItem="ruR-fx-XSo" secondAttribute="top" constant="21" id="QAf-ai-2vE"/>
-                                                    <constraint firstItem="CXb-Zn-Mub" firstAttribute="top" secondItem="ruR-fx-XSo" secondAttribute="top" constant="10" id="QqZ-4q-fL0"/>
-                                                    <constraint firstAttribute="trailing" secondItem="6Q8-BW-2Xw" secondAttribute="trailing" constant="21" id="VtD-Ul-fh3"/>
-                                                    <constraint firstAttribute="height" constant="139" id="lgp-L6-Jw6"/>
-                                                    <constraint firstAttribute="bottom" secondItem="6Q8-BW-2Xw" secondAttribute="bottom" constant="43" id="vDw-ph-9cb"/>
-                                                    <constraint firstAttribute="bottom" secondItem="CXb-Zn-Mub" secondAttribute="bottom" constant="10" id="yww-3m-v0s"/>
+                                                    <constraint firstAttribute="width" constant="336" id="rHr-5K-E6v"/>
                                                 </constraints>
-                                            </view>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ابحث عن جميع المنتجعات القريبة منك بضغطة زر" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oz-DG-NrK">
+                                                <rect key="frame" x="69" y="789" width="237" height="48"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbf-UY-foE">
+                                                <rect key="frame" x="37" y="872" width="300" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.3294117647" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="البحث عن منتجات قرب موقعك">
+                                                    <color key="titleColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
@@ -286,12 +292,18 @@
                                             <constraint firstItem="w6L-Qh-S5R" firstAttribute="leading" secondItem="HZB-sX-RBh" secondAttribute="leading" constant="20" id="58L-mw-RLH"/>
                                             <constraint firstItem="J4B-TU-WFl" firstAttribute="leading" secondItem="HZB-sX-RBh" secondAttribute="leading" constant="19" id="Ckl-fg-S14"/>
                                             <constraint firstItem="cE6-vI-hYt" firstAttribute="top" secondItem="HZB-sX-RBh" secondAttribute="top" constant="70" id="DN0-px-wPz"/>
-                                            <constraint firstAttribute="trailing" secondItem="ruR-fx-XSo" secondAttribute="trailing" constant="20" id="Skf-9H-Fdb"/>
+                                            <constraint firstItem="01i-53-5EO" firstAttribute="leading" secondItem="HZB-sX-RBh" secondAttribute="leading" constant="20" id="Fam-Vv-dJR"/>
+                                            <constraint firstAttribute="trailing" secondItem="Bbf-UY-foE" secondAttribute="trailing" constant="38" id="Iyr-vp-RDV"/>
+                                            <constraint firstItem="Bbf-UY-foE" firstAttribute="top" secondItem="1oz-DG-NrK" secondAttribute="bottom" constant="35" id="Mf2-c2-eDi"/>
+                                            <constraint firstItem="1oz-DG-NrK" firstAttribute="top" secondItem="w6L-Qh-S5R" secondAttribute="bottom" constant="60" id="Npr-cP-4m5"/>
+                                            <constraint firstItem="1oz-DG-NrK" firstAttribute="leading" secondItem="HZB-sX-RBh" secondAttribute="leading" constant="69" id="OpQ-JF-puW"/>
+                                            <constraint firstAttribute="trailing" secondItem="01i-53-5EO" secondAttribute="trailing" constant="19" id="TaZ-1S-3qk"/>
                                             <constraint firstItem="cE6-vI-hYt" firstAttribute="centerX" secondItem="HZB-sX-RBh" secondAttribute="centerX" id="TeW-bX-s6u"/>
-                                            <constraint firstItem="ruR-fx-XSo" firstAttribute="top" secondItem="w6L-Qh-S5R" secondAttribute="bottom" constant="40" id="Z1q-Rw-XyW"/>
+                                            <constraint firstItem="01i-53-5EO" firstAttribute="top" secondItem="w6L-Qh-S5R" secondAttribute="bottom" constant="40" id="UEZ-EY-bta"/>
+                                            <constraint firstItem="Bbf-UY-foE" firstAttribute="leading" secondItem="HZB-sX-RBh" secondAttribute="leading" constant="37" id="dFc-Je-oi1"/>
                                             <constraint firstItem="J4B-TU-WFl" firstAttribute="top" secondItem="cE6-vI-hYt" secondAttribute="bottom" constant="20" id="fkR-Cs-fHu"/>
                                             <constraint firstItem="w6L-Qh-S5R" firstAttribute="top" secondItem="J4B-TU-WFl" secondAttribute="bottom" constant="20" id="kCg-wu-iF1"/>
-                                            <constraint firstItem="ruR-fx-XSo" firstAttribute="leading" secondItem="HZB-sX-RBh" secondAttribute="leading" constant="19" id="qKU-gF-FPf"/>
+                                            <constraint firstAttribute="trailing" secondItem="1oz-DG-NrK" secondAttribute="trailing" constant="69" id="px8-Ub-Gv0"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -325,7 +337,8 @@
                         <outlet property="buttonView" destination="Opg-29-LTf" id="RnA-HK-CPD"/>
                         <outlet property="cityText" destination="Ehz-f3-6BH" id="nDQ-Gb-9Ig"/>
                         <outlet property="container" destination="J4B-TU-WFl" id="QDU-BE-Dk9"/>
-                        <outlet property="footerContainer" destination="ruR-fx-XSo" id="GiK-qc-Pk3"/>
+                        <outlet property="dateText" destination="dlj-42-Iyy" id="gY6-d6-56A"/>
+                        <outlet property="mapImage" destination="01i-53-5EO" id="OQO-GR-qi6"/>
                         <outlet property="middleContainer" destination="w6L-Qh-S5R" id="dji-Tb-sfT"/>
                         <outlet property="searchBtn" destination="pOh-oa-HP6" id="YHJ-SE-h5r"/>
                         <outlet property="textSearch" destination="PgA-bB-cxx" id="t2T-eO-z6H"/>

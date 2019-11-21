@@ -21,18 +21,30 @@ class HomeViewController:  PickerController {
            }
           
        }
-       @IBOutlet weak var footerContainer: UIView!
-          {
-              didSet{
-                        
+    @IBOutlet weak var mapImage: UIImageView!
+    {
+        didSet{
                   
-                  
-                  self.footerContainer.layer.shadowColor = UIColor.rgb(5,0,0,0.13).cgColor
-                  self.footerContainer.layer.shadowRadius = 9
-                  self.footerContainer.layer.shadowOpacity = 1
-                  self.footerContainer.layer.shadowOffset = CGSize(width: 0, height: 5)
-              }
-          }
+            
+            
+            self.mapImage.layer.shadowColor = UIColor.rgb(5,0,0,0.13).cgColor
+            self.mapImage.layer.shadowRadius = 9
+            self.mapImage.layer.shadowOpacity = 1
+            self.mapImage.layer.shadowOffset = CGSize(width: 0, height: 5)
+        }
+    }
+//    @IBOutlet weak var footerContainer: UIView!
+//          {
+//              didSet{
+//
+//
+//
+//                  self.footerContainer.layer.shadowColor = UIColor.rgb(5,0,0,0.13).cgColor
+//                  self.footerContainer.layer.shadowRadius = 9
+//                  self.footerContainer.layer.shadowOpacity = 1
+//                  self.footerContainer.layer.shadowOffset = CGSize(width: 0, height: 5)
+//              }
+//          }
           @IBOutlet weak var middleContainer: UIView!
              {
                    didSet{
@@ -42,7 +54,7 @@ class HomeViewController:  PickerController {
                            self.middleContainer.layer.shadowOpacity = 1
                            self.middleContainer.layer.shadowOffset = CGSize(width: 0, height: 9)
                        }
-             } 
+             }
     
     let pickerView: UIDatePicker = {
                                   let view = UIDatePicker()
@@ -139,18 +151,7 @@ class HomeViewController:  PickerController {
                cityText.layer.borderColor = borderColor.cgColor
            }
        }
-      func assignbackground(){
-          let background = UIImage(named: "map")
-
-          var imageView : UIImageView!
-          imageView = UIImageView(frame: footerContainer.bounds)
-        imageView.contentMode =  UIView.ContentMode.scaleAspectFit
-          imageView.clipsToBounds = true
-          imageView.image = background
-          imageView.center = footerContainer.center
-          footerContainer.addSubview(imageView)
-          self.footerContainer.sendSubviewToBack(imageView)
-      }
+   
    
     
     @IBAction func dateOutTapped(_ sender: UITextField!) {
@@ -158,8 +159,19 @@ class HomeViewController:  PickerController {
         pickerView.addTarget(self, action: #selector(datePickerValueChanged(sender:)), for: .valueChanged)
            pickerView.isHidden = false
        }
+    @IBOutlet weak var dateText: UITextField!
+    
+                   
+             
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.dateText.layer.borderColor = borderColor.cgColor
+                                         self.dateText.layer.cornerRadius = 10
+                                       self.dateText.layer.borderWidth = 1
+                                         self.dateText.layer.backgroundColor = backgroundColor.cgColor
+        
+                                      
     pickerView.timeZone = .current
     pickerView.locale = Locale(identifier: "ar")
                      pickerView.datePickerMode = UIDatePicker.Mode.date
