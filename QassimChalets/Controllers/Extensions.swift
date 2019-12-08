@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PickerController: UIViewController {
+class Extensions: UIViewController {
     
     private let pickerView: UIDatePicker = {
         let view = UIDatePicker()

@@ -9,7 +9,7 @@
 import UIKit
 import DropDown
 import DatePickerDialog
-class HomeViewController:  PickerController {
+class HomeViewController:  Extensions {
     @IBOutlet weak var container: UIView!
        {
            didSet
@@ -161,11 +161,12 @@ class HomeViewController:  PickerController {
        }
     @IBOutlet weak var dateText: UITextField!
     
-                   
+          
              
-    
+    //MARK-ViewDidload
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         self.dateText.layer.borderColor = borderColor.cgColor
                                          self.dateText.layer.cornerRadius = 10
                                        self.dateText.layer.borderWidth = 1

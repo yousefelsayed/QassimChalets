@@ -14,7 +14,18 @@
 		CA15ACB22370A14D004DD44E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA15ACB12370A14D004DD44E /* Assets.xcassets */; };
 		CA15ACB52370A14D004DD44E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA15ACB32370A14D004DD44E /* LaunchScreen.storyboard */; };
 		CA15ACBE2370AEE9004DD44E /* logoSh.png in Resources */ = {isa = PBXBuildFile; fileRef = CA15ACBD2370AEE9004DD44E /* logoSh.png */; };
-		CA15ACC2237DA0A6004DD44E /* PickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA15ACC1237DA0A6004DD44E /* PickerController.swift */; };
+		CA15ACC2237DA0A6004DD44E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA15ACC1237DA0A6004DD44E /* Extensions.swift */; };
+		CA22C9AA239D195700C3EA0A /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA22C9A9239D195700C3EA0A /* Api.swift */; };
+		CA22C9AC239D21F800C3EA0A /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA22C9AB239D21F800C3EA0A /* Config.swift */; };
+		CA22C9AE239D282500C3EA0A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA22C9AD239D282500C3EA0A /* RegisterViewController.swift */; };
+		CA22C9B0239D554E00C3EA0A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA22C9AF239D554E00C3EA0A /* Helper.swift */; };
+		CA91B41523969C02000BD104 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA91B41423969C02000BD104 /* MoreViewController.swift */; };
+		CA91B41A2396B756000BD104 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA91B4182396B756000BD104 /* CustomTableViewCell.swift */; };
+		CA91B41B2396B756000BD104 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA91B4192396B756000BD104 /* CustomTableViewCell.xib */; };
+		CA91B41E2397CB55000BD104 /* AddBuildingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA91B41D2397CB55000BD104 /* AddBuildingViewController.swift */; };
+		CA91B421239BC9F7000BD104 /* TextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA91B41F239BC9F7000BD104 /* TextViewCell.swift */; };
+		CA91B422239BC9F7000BD104 /* TextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA91B420239BC9F7000BD104 /* TextViewCell.xib */; };
+		CA91B424239BCCB3000BD104 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA91B423239BCCB3000BD104 /* SignInViewController.swift */; };
 		CA939A232385843200B375C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA15ACAE2370A148004DD44E /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +42,18 @@
 		CA15ACB42370A14D004DD44E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA15ACB62370A14D004DD44E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA15ACBD2370AEE9004DD44E /* logoSh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoSh.png; sourceTree = "<group>"; };
-		CA15ACC1237DA0A6004DD44E /* PickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerController.swift; sourceTree = "<group>"; };
+		CA15ACC1237DA0A6004DD44E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CA22C9A9239D195700C3EA0A /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		CA22C9AB239D21F800C3EA0A /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		CA22C9AD239D282500C3EA0A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		CA22C9AF239D554E00C3EA0A /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		CA91B41423969C02000BD104 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		CA91B4182396B756000BD104 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		CA91B4192396B756000BD104 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		CA91B41D2397CB55000BD104 /* AddBuildingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBuildingViewController.swift; sourceTree = "<group>"; };
+		CA91B41F239BC9F7000BD104 /* TextViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewCell.swift; sourceTree = "<group>"; };
+		CA91B420239BC9F7000BD104 /* TextViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextViewCell.xib; sourceTree = "<group>"; };
+		CA91B423239BCCB3000BD104 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +108,7 @@
 			children = (
 				CA15ACA82370A148004DD44E /* AppDelegate.swift */,
 				CA15ACAA2370A148004DD44E /* SceneDelegate.swift */,
+				CA22C9A6239D18D700C3EA0A /* API Manager */,
 				CA15ACBF2370B58B004DD44E /* Controllers */,
 				CA15ACC02370B5B0004DD44E /* Views */,
 				CA15ACBC2370AEB6004DD44E /* Support Files */,
@@ -108,7 +131,12 @@
 			isa = PBXGroup;
 			children = (
 				CA15ACAC2370A148004DD44E /* HomeViewController.swift */,
-				CA15ACC1237DA0A6004DD44E /* PickerController.swift */,
+				CA91B41423969C02000BD104 /* MoreViewController.swift */,
+				CA15ACC1237DA0A6004DD44E /* Extensions.swift */,
+				CA91B41D2397CB55000BD104 /* AddBuildingViewController.swift */,
+				CA91B423239BCCB3000BD104 /* SignInViewController.swift */,
+				CA22C9AD239D282500C3EA0A /* RegisterViewController.swift */,
+				CA91B41C2396B777000BD104 /* CustomCell */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -119,6 +147,27 @@
 				CA15ACAE2370A148004DD44E /* Main.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CA22C9A6239D18D700C3EA0A /* API Manager */ = {
+			isa = PBXGroup;
+			children = (
+				CA22C9A9239D195700C3EA0A /* Api.swift */,
+				CA22C9AB239D21F800C3EA0A /* Config.swift */,
+				CA22C9AF239D554E00C3EA0A /* Helper.swift */,
+			);
+			path = "API Manager";
+			sourceTree = "<group>";
+		};
+		CA91B41C2396B777000BD104 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				CA91B4182396B756000BD104 /* CustomTableViewCell.swift */,
+				CA91B4192396B756000BD104 /* CustomTableViewCell.xib */,
+				CA91B41F239BC9F7000BD104 /* TextViewCell.swift */,
+				CA91B420239BC9F7000BD104 /* TextViewCell.xib */,
+			);
+			path = CustomCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,7 +233,9 @@
 				CA15ACB52370A14D004DD44E /* LaunchScreen.storyboard in Resources */,
 				CA15ACBE2370AEE9004DD44E /* logoSh.png in Resources */,
 				CA15ACB22370A14D004DD44E /* Assets.xcassets in Resources */,
+				CA91B41B2396B756000BD104 /* CustomTableViewCell.xib in Resources */,
 				CA939A232385843200B375C6 /* Main.storyboard in Resources */,
+				CA91B422239BC9F7000BD104 /* TextViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,10 +288,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA91B41523969C02000BD104 /* MoreViewController.swift in Sources */,
 				CA15ACAD2370A148004DD44E /* HomeViewController.swift in Sources */,
+				CA91B41E2397CB55000BD104 /* AddBuildingViewController.swift in Sources */,
+				CA22C9AE239D282500C3EA0A /* RegisterViewController.swift in Sources */,
+				CA91B41A2396B756000BD104 /* CustomTableViewCell.swift in Sources */,
+				CA22C9AC239D21F800C3EA0A /* Config.swift in Sources */,
 				CA15ACA92370A148004DD44E /* AppDelegate.swift in Sources */,
+				CA91B424239BCCB3000BD104 /* SignInViewController.swift in Sources */,
+				CA91B421239BC9F7000BD104 /* TextViewCell.swift in Sources */,
 				CA15ACAB2370A148004DD44E /* SceneDelegate.swift in Sources */,
-				CA15ACC2237DA0A6004DD44E /* PickerController.swift in Sources */,
+				CA22C9B0239D554E00C3EA0A /* Helper.swift in Sources */,
+				CA22C9AA239D195700C3EA0A /* Api.swift in Sources */,
+				CA15ACC2237DA0A6004DD44E /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

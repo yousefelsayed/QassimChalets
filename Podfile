@@ -7,5 +7,8 @@ target 'QassimChalets' do
 
   # Pods for QassimChalets
 pod 'DropDown'
+pod 'SkyFloatingLabelTextField', '~> 3.0'
 pod 'DatePickerDialog'
+pod 'Alamofire', '~> 5.0.0-rc.3'
+pod 'SwiftyJSON'
 end

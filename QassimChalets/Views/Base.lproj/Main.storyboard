@@ -7,23 +7,332 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!-- المزيد-->
+        <!--المزيد-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QassimChalets" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MoreViewController" customModule="QassimChalets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEF-Sp-DPu" userLabel="UpperContainer">
+                                <rect key="frame" x="8" y="98" width="359" height="97"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="mwP-TH-ufp">
+                                        <rect key="frame" x="273" y="15" width="70" height="67"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQo-Zw-tVL">
+                                        <rect key="frame" x="8" y="33" width="257" height="30"/>
+                                        <state key="normal" title="دخول / او انشاء حساب جديد">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="RIY-RR-ZiS" kind="show" identifier="signInSegue" id="NRa-xJ-q79"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="VQo-Zw-tVL" secondAttribute="bottom" constant="34" id="1Yj-L7-bss"/>
+                                    <constraint firstAttribute="bottom" secondItem="mwP-TH-ufp" secondAttribute="bottom" constant="15" id="BEf-oI-k79"/>
+                                    <constraint firstAttribute="height" constant="97" id="Ea9-SH-rJO"/>
+                                    <constraint firstAttribute="trailing" secondItem="VQo-Zw-tVL" secondAttribute="trailing" constant="94" id="PRK-YQ-3Dn"/>
+                                    <constraint firstItem="VQo-Zw-tVL" firstAttribute="leading" secondItem="dEF-Sp-DPu" secondAttribute="leading" constant="8" id="Q4C-Ff-7Tu"/>
+                                    <constraint firstItem="VQo-Zw-tVL" firstAttribute="top" secondItem="dEF-Sp-DPu" secondAttribute="top" constant="33" id="bHr-8Z-UIy"/>
+                                    <constraint firstItem="mwP-TH-ufp" firstAttribute="leading" secondItem="dEF-Sp-DPu" secondAttribute="leading" constant="273" id="oex-Wy-t4M"/>
+                                    <constraint firstAttribute="trailing" secondItem="mwP-TH-ufp" secondAttribute="trailing" constant="16" id="tWK-Fz-9km"/>
+                                    <constraint firstItem="mwP-TH-ufp" firstAttribute="top" secondItem="dEF-Sp-DPu" secondAttribute="top" constant="15" id="u61-WQ-XAQ"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yia-83-3N0">
+                                <rect key="frame" x="8" y="215" width="359" height="345"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="345" id="1mB-bE-J5x"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomTableViewCell" id="vKZ-b8-Nvx" customClass="CustomTableViewCell" customModule="QassimChalets" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="359" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vKZ-b8-Nvx" id="nDt-O4-K6b">
+                                            <rect key="frame" x="0.0" y="0.0" width="359" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="yia-83-3N0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="599-8j-4Gk"/>
+                            <constraint firstItem="yia-83-3N0" firstAttribute="top" secondItem="dEF-Sp-DPu" secondAttribute="bottom" constant="20" id="JdM-fo-i6h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yia-83-3N0" secondAttribute="trailing" constant="8" id="R4X-Le-Y7e"/>
+                            <constraint firstAttribute="trailing" secondItem="dEF-Sp-DPu" secondAttribute="trailing" constant="8" id="e4u-ZH-AHV"/>
+                            <constraint firstItem="dEF-Sp-DPu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="jBn-YD-QC5"/>
+                            <constraint firstItem="dEF-Sp-DPu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="kK2-dN-rki"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" image="more" id="xEw-4I-oya">
-                        <string key="title">	المزيد</string>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="المزيد" id="Dgr-dL-Do9"/>
+                    <connections>
+                        <outlet property="tableView" destination="yia-83-3N0" id="4XS-qY-9oA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042.0289855072465" y="91.741071428571431"/>
+            <point key="canvasLocation" x="1983.2" y="91.625615763546804"/>
+        </scene>
+        <!--Sign In View Controller-->
+        <scene sceneID="ta6-Y7-F4u">
+            <objects>
+                <viewController storyboardIdentifier="SignInViewController" hidesBottomBarWhenPushed="YES" id="RIY-RR-ZiS" customClass="SignInViewController" customModule="QassimChalets" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w42-XF-UbD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoSh" translatesAutoresizingMaskIntoConstraints="NO" id="5J3-Hz-xtQ">
+                                <rect key="frame" x="97" y="130" width="180" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="103" id="nfN-yE-rEk"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBe-6i-7zb">
+                                <rect key="frame" x="122" y="243" width="132" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="EH8-6R-Yx8"/>
+                                    <constraint firstAttribute="width" constant="132" id="yAh-CU-k34"/>
+                                </constraints>
+                                <string key="text">اهلا ومرحبا بك
+في شاليهات القصيم</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tKD-CU-ZKi">
+                                <rect key="frame" x="24" y="319" width="327" height="178"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="178" id="9wF-NK-5YA"/>
+                                    <constraint firstAttribute="width" constant="327" id="jMR-hZ-WNe"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" clipsSubviews="YES" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKr-ap-AbJ">
+                                <rect key="frame" x="21" y="532" width="335" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.32941176470588235" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="PCz-HZ-QSZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="دخول">
+                                    <color key="titleColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signInTapped:" destination="RIY-RR-ZiS" eventType="touchUpInside" id="lE7-8u-enH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qF1-7Z-fdB">
+                                <rect key="frame" x="118.66666666666669" y="593" width="138" height="30"/>
+                                <state key="normal" title="هل نسيت كلمة المرور ؟">
+                                    <color key="titleColor" red="0.0" green="0.3294117647" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28N-rV-C2v">
+                                <rect key="frame" x="73" y="684" width="229" height="30"/>
+                                <state key="normal" title="ليس لديك حساب ؟ سجل حساب جديد">
+                                    <color key="titleColor" red="0.0" green="0.3294117647" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9eA-cP-FV5" kind="show" id="8jc-qe-jwy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WBe-6i-7zb" firstAttribute="leading" secondItem="6zq-rw-dlw" secondAttribute="leading" constant="122" id="1bE-1x-sft"/>
+                            <constraint firstItem="tKD-CU-ZKi" firstAttribute="leading" secondItem="6zq-rw-dlw" secondAttribute="leading" constant="24" id="3ox-nW-PWK"/>
+                            <constraint firstItem="aKr-ap-AbJ" firstAttribute="leading" secondItem="6zq-rw-dlw" secondAttribute="leading" constant="21" id="DZc-ri-Qj6"/>
+                            <constraint firstItem="6zq-rw-dlw" firstAttribute="trailing" secondItem="aKr-ap-AbJ" secondAttribute="trailing" constant="19" id="Ohx-RK-hHb"/>
+                            <constraint firstItem="28N-rV-C2v" firstAttribute="centerX" secondItem="w42-XF-UbD" secondAttribute="centerX" id="YXR-jW-FxD"/>
+                            <constraint firstItem="tKD-CU-ZKi" firstAttribute="top" secondItem="WBe-6i-7zb" secondAttribute="bottom" constant="31" id="a74-Mv-vnV"/>
+                            <constraint firstItem="6zq-rw-dlw" firstAttribute="trailing" secondItem="5J3-Hz-xtQ" secondAttribute="trailing" constant="98" id="b4J-lb-8gD"/>
+                            <constraint firstItem="aKr-ap-AbJ" firstAttribute="top" secondItem="tKD-CU-ZKi" secondAttribute="bottom" constant="35" id="h1E-tV-ST3"/>
+                            <constraint firstItem="28N-rV-C2v" firstAttribute="top" secondItem="qF1-7Z-fdB" secondAttribute="bottom" constant="61" id="h9D-Y4-hbt"/>
+                            <constraint firstItem="qF1-7Z-fdB" firstAttribute="centerX" secondItem="w42-XF-UbD" secondAttribute="centerX" id="i26-ro-5ym"/>
+                            <constraint firstItem="qF1-7Z-fdB" firstAttribute="top" secondItem="aKr-ap-AbJ" secondAttribute="bottom" constant="16" id="mjB-tb-bqD"/>
+                            <constraint firstItem="6zq-rw-dlw" firstAttribute="trailing" secondItem="tKD-CU-ZKi" secondAttribute="trailing" constant="24" id="onA-pZ-NOg"/>
+                            <constraint firstItem="5J3-Hz-xtQ" firstAttribute="top" secondItem="6zq-rw-dlw" secondAttribute="top" constant="42" id="oxz-Ye-BY3"/>
+                            <constraint firstItem="6zq-rw-dlw" firstAttribute="trailing" secondItem="WBe-6i-7zb" secondAttribute="trailing" constant="121" id="pzr-IE-JCa"/>
+                            <constraint firstItem="WBe-6i-7zb" firstAttribute="top" secondItem="5J3-Hz-xtQ" secondAttribute="bottom" constant="10" id="q71-nX-bOe"/>
+                            <constraint firstItem="5J3-Hz-xtQ" firstAttribute="leading" secondItem="6zq-rw-dlw" secondAttribute="leading" constant="97" id="xXh-39-AnC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6zq-rw-dlw"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jZW-1S-T9E"/>
+                    <connections>
+                        <outlet property="container" destination="tKD-CU-ZKi" id="uaO-cw-tsm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZjZ-kE-2CI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1692" y="755.9113300492611"/>
+        </scene>
+        <!--تسجيل حساب جديد-->
+        <scene sceneID="tqO-S3-evZ">
+            <objects>
+                <viewController id="9eA-cP-FV5" customClass="RegisterViewController" customModule="QassimChalets" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DVQ-qL-HoE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WDd-A1-2eP">
+                                <rect key="frame" x="20" y="638" width="335" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.3294117647" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="sgp-9L-NwU"/>
+                                </constraints>
+                                <state key="normal" title="تسجيل حساب جديد">
+                                    <color key="titleColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerPressed:" destination="9eA-cP-FV5" eventType="touchUpInside" id="hhn-KK-16w"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تسجيلك يعتبر موافقة على سياسة الاستخدام" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPa-41-dLh">
+                                <rect key="frame" x="42" y="691" width="291" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5nY-EM-JlA">
+                                <rect key="frame" x="16" y="110" width="343" height="490"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="490" id="RF4-VQ-a0F"/>
+                                    <constraint firstAttribute="width" constant="343" id="ajE-KJ-cwl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5nY-EM-JlA" firstAttribute="top" secondItem="qFh-tt-Xzq" secondAttribute="top" constant="22" id="Bx9-GV-rcx"/>
+                            <constraint firstItem="5nY-EM-JlA" firstAttribute="leading" secondItem="qFh-tt-Xzq" secondAttribute="leading" constant="16" id="ROZ-4w-ufl"/>
+                            <constraint firstItem="qFh-tt-Xzq" firstAttribute="trailing" secondItem="WDd-A1-2eP" secondAttribute="trailing" constant="20" id="UuB-IJ-LFZ"/>
+                            <constraint firstItem="WDd-A1-2eP" firstAttribute="top" secondItem="5nY-EM-JlA" secondAttribute="bottom" constant="38" id="ZU3-Vn-Uyd"/>
+                            <constraint firstItem="cPa-41-dLh" firstAttribute="centerX" secondItem="DVQ-qL-HoE" secondAttribute="centerX" id="blp-eW-6lE"/>
+                            <constraint firstItem="qFh-tt-Xzq" firstAttribute="trailing" secondItem="5nY-EM-JlA" secondAttribute="trailing" constant="16" id="dH4-QB-Z54"/>
+                            <constraint firstItem="cPa-41-dLh" firstAttribute="top" secondItem="WDd-A1-2eP" secondAttribute="bottom" constant="8" id="j2M-tT-SI1"/>
+                            <constraint firstItem="WDd-A1-2eP" firstAttribute="leading" secondItem="qFh-tt-Xzq" secondAttribute="leading" constant="20" id="n54-sI-lGF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qFh-tt-Xzq"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="تسجيل حساب جديد" id="Fh5-on-mrd"/>
+                    <connections>
+                        <outlet property="container" destination="5nY-EM-JlA" id="FC2-d2-Vnc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Brb-wg-6Wa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1692" y="1495.5665024630543"/>
+        </scene>
+        <!--اضف عقارك معنا-->
+        <scene sceneID="BjV-w1-KAV">
+            <objects>
+                <viewController storyboardIdentifier="AddBuildingViewController" id="3U4-Ky-Ynk" customClass="AddBuildingViewController" customModule="QassimChalets" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FdO-AU-26G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NDH-lf-WXK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="956"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FAj-wn-EOw" userLabel="contentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="372" height="956"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoSh" translatesAutoresizingMaskIntoConstraints="NO" id="zen-gw-4bl">
+                                                <rect key="frame" x="125" y="20" width="137" height="97"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="137" id="NuE-e9-mei"/>
+                                                    <constraint firstAttribute="height" constant="97" id="jc1-CT-vdv"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مجموعة شاليهات السعودية تتشرف بان تكون احد عملائها" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6j-SL-jEq">
+                                                <rect key="frame" x="10" y="122.00000000000001" width="352" height="40.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PeY-5w-UxX">
+                                                <rect key="frame" x="24" y="192" width="325" height="451"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puS-T0-ypV">
+                                                <rect key="frame" x="20" y="692" width="332" height="45"/>
+                                                <color key="backgroundColor" red="0.0" green="0.3294117647" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="LEL-Xx-Tof"/>
+                                                </constraints>
+                                                <state key="normal" title="تسجيل">
+                                                    <color key="titleColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="zen-gw-4bl" secondAttribute="trailing" constant="110" id="3Oy-Zf-SYC"/>
+                                            <constraint firstItem="F6j-SL-jEq" firstAttribute="top" secondItem="FAj-wn-EOw" secondAttribute="top" constant="122" id="E1h-wp-D95"/>
+                                            <constraint firstAttribute="trailing" secondItem="PeY-5w-UxX" secondAttribute="trailing" constant="23" id="Ja7-8I-Erj"/>
+                                            <constraint firstItem="puS-T0-ypV" firstAttribute="leading" secondItem="FAj-wn-EOw" secondAttribute="leading" constant="20" id="M5F-G2-iej"/>
+                                            <constraint firstAttribute="trailing" secondItem="F6j-SL-jEq" secondAttribute="trailing" constant="10" id="Uap-uO-hln"/>
+                                            <constraint firstItem="PeY-5w-UxX" firstAttribute="leading" secondItem="FAj-wn-EOw" secondAttribute="leading" constant="24" id="ZOq-gq-5Fp"/>
+                                            <constraint firstAttribute="height" constant="956" id="cEh-dd-wUi"/>
+                                            <constraint firstAttribute="trailing" secondItem="puS-T0-ypV" secondAttribute="trailing" constant="20" id="fOA-sR-uuN"/>
+                                            <constraint firstItem="F6j-SL-jEq" firstAttribute="leading" secondItem="FAj-wn-EOw" secondAttribute="leading" constant="10" id="mVX-9Y-Imj"/>
+                                            <constraint firstAttribute="width" constant="372" id="ngh-P8-hCj"/>
+                                            <constraint firstItem="zen-gw-4bl" firstAttribute="top" secondItem="FAj-wn-EOw" secondAttribute="top" constant="20" id="no2-3h-HIv"/>
+                                            <constraint firstAttribute="bottom" secondItem="PeY-5w-UxX" secondAttribute="bottom" constant="313" id="oK9-Pe-iMO"/>
+                                            <constraint firstItem="zen-gw-4bl" firstAttribute="leading" secondItem="FAj-wn-EOw" secondAttribute="leading" constant="125" id="s4V-68-r8e"/>
+                                            <constraint firstItem="PeY-5w-UxX" firstAttribute="top" secondItem="FAj-wn-EOw" secondAttribute="top" constant="192" id="vPo-y8-v4s"/>
+                                            <constraint firstAttribute="trailing" secondItem="zen-gw-4bl" secondAttribute="trailing" constant="110" id="xdR-Qh-5sp"/>
+                                            <constraint firstItem="puS-T0-ypV" firstAttribute="top" secondItem="FAj-wn-EOw" secondAttribute="top" constant="692" id="zMU-Wn-ctl"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="FAj-wn-EOw" secondAttribute="trailing" id="AvM-gi-gW2"/>
+                                    <constraint firstItem="FAj-wn-EOw" firstAttribute="leading" secondItem="NDH-lf-WXK" secondAttribute="leading" id="MPN-q9-l9S"/>
+                                    <constraint firstItem="FAj-wn-EOw" firstAttribute="top" secondItem="NDH-lf-WXK" secondAttribute="top" id="Qg2-z1-iQf"/>
+                                    <constraint firstItem="FAj-wn-EOw" firstAttribute="top" secondItem="NDH-lf-WXK" secondAttribute="top" id="Ueq-uX-FK8"/>
+                                    <constraint firstAttribute="bottom" secondItem="FAj-wn-EOw" secondAttribute="bottom" id="UtE-EP-UnL"/>
+                                    <constraint firstAttribute="trailing" secondItem="FAj-wn-EOw" secondAttribute="trailing" id="es2-g0-Rhl"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="6XZ-p1-wdr"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Kgm-ND-4VP"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NDH-lf-WXK" firstAttribute="leading" secondItem="ozH-ee-RT1" secondAttribute="leading" id="3At-8Y-Ncv"/>
+                            <constraint firstItem="NDH-lf-WXK" firstAttribute="trailing" secondItem="ozH-ee-RT1" secondAttribute="trailing" id="5GX-G6-z4w"/>
+                            <constraint firstItem="NDH-lf-WXK" firstAttribute="leading" secondItem="ozH-ee-RT1" secondAttribute="leading" id="8wX-uw-1eL"/>
+                            <constraint firstItem="NDH-lf-WXK" firstAttribute="top" secondItem="FdO-AU-26G" secondAttribute="top" id="M3f-F5-ovs"/>
+                            <constraint firstItem="NDH-lf-WXK" firstAttribute="trailing" secondItem="ozH-ee-RT1" secondAttribute="trailing" id="ZOT-5G-lBc"/>
+                            <constraint firstItem="NDH-lf-WXK" firstAttribute="leading" secondItem="ozH-ee-RT1" secondAttribute="leading" id="dYo-di-OfA"/>
+                            <constraint firstItem="NDH-lf-WXK" firstAttribute="top" secondItem="FdO-AU-26G" secondAttribute="top" id="ffu-Rg-5Ft"/>
+                            <constraint firstItem="ozH-ee-RT1" firstAttribute="bottom" secondItem="NDH-lf-WXK" secondAttribute="bottom" constant="10" id="hGR-rF-s3p"/>
+                            <constraint firstItem="NDH-lf-WXK" firstAttribute="trailing" secondItem="ozH-ee-RT1" secondAttribute="trailing" id="rUh-4U-h0X"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ozH-ee-RT1"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="اضف عقارك معنا" id="UGF-xY-vfz"/>
+                    <size key="freeformSize" width="375" height="1000"/>
+                    <connections>
+                        <outlet property="container" destination="PeY-5w-UxX" id="MkG-Im-scr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b7S-52-Qac" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2925.5999999999999" y="1019.704433497537"/>
         </scene>
         <!-- العروض-->
         <scene sceneID="Vkj-Fl-wvP">
@@ -32,7 +341,7 @@
                     <view key="view" contentMode="scaleToFill" id="fL3-N9-2Pq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="d89-M4-2lB"/>
                     </view>
                     <tabBarItem key="tabBarItem" image="offers" id="DMi-e1-ehn">
@@ -42,7 +351,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6yv-7P-QOk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2030" y="48"/>
+            <point key="canvasLocation" x="2972" y="47.290640394088669"/>
         </scene>
         <!--خدمات اضافية-->
         <scene sceneID="tZd-jk-2l9">
@@ -59,7 +368,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hyj-SL-iJG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2987" y="90"/>
+            <point key="canvasLocation" x="3928.8000000000002" y="89.408866995073893"/>
         </scene>
         <!--المفضلة-->
         <scene sceneID="GPJ-kM-nWv">
@@ -68,7 +377,7 @@
                     <view key="view" contentMode="scaleToFill" id="HRq-NB-hmb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="JIR-LN-dcn"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="المفضلة" image="heart.fill" catalog="system" id="cay-Zd-3GR"/>
@@ -76,21 +385,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PoT-Zo-VLj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1084" y="768"/>
+            <point key="canvasLocation" x="34" y="115"/>
         </scene>
-        <!-- الرئيسية-->
+        <!--الرئيسية-->
         <scene sceneID="hlT-d1-zeM">
             <objects>
-                <viewController id="j0Y-XB-jpq" customClass="HomeViewController" customModule="QassimChalets" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeController" id="j0Y-XB-jpq" customClass="HomeViewController" customModule="QassimChalets" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Var-Nv-Pfx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HAG-4A-aGT">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="956"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HZB-sX-RBh" userLabel="contentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="956"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoSh" translatesAutoresizingMaskIntoConstraints="NO" id="cE6-vI-hYt">
                                                 <rect key="frame" x="103" y="70" width="169" height="97"/>
@@ -112,7 +421,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ابحث عن المدينة" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ehz-f3-6BH">
-                                                        <rect key="frame" x="18" y="46.333333333333343" width="300" height="34.666666666666657"/>
+                                                        <rect key="frame" x="18" y="46.333333333333314" width="300" height="34.666666666666657"/>
                                                         <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -328,9 +637,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="B6O-KU-nOP"/>
                     </view>
-                    <tabBarItem key="tabBarItem" image="house.fill" catalog="system" id="MZg-l6-70U">
-                        <string key="title">	الرئيسية</string>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="الرئيسية" id="VdX-Nl-dkU"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
@@ -347,7 +654,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3CW-27-iw9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2074.4000000000001" y="755.9113300492611"/>
+            <point key="canvasLocation" x="5858.3999999999996" y="159.60591133004928"/>
         </scene>
         <!--Home-->
         <scene sceneID="drc-kw-m3w">
@@ -359,17 +666,72 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="3Qb-4o-Drj"/>
+                        <segue destination="D7N-YN-va4" kind="relationship" relationship="viewControllers" id="3Qb-4o-Drj"/>
                         <segue destination="3h6-fg-buM" kind="relationship" relationship="viewControllers" id="2n7-hC-zwC"/>
                         <segue destination="cpp-S3-1rQ" kind="relationship" relationship="viewControllers" id="hs1-0G-UWn"/>
                         <segue destination="5Kc-2d-iB1" kind="relationship" relationship="viewControllers" id="xcE-ga-bDW"/>
-                        <segue destination="j0Y-XB-jpq" kind="relationship" relationship="viewControllers" id="rIC-KG-LdC"/>
+                        <segue destination="kT2-Nz-5fe" kind="relationship" relationship="viewControllers" id="rIC-KG-LdC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nJB-n1-ROH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="91.741071428571431"/>
+            <point key="canvasLocation" x="2030" y="-745"/>
+        </scene>
+        <!-- الرئيسية-->
+        <scene sceneID="8xx-sX-vWb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kT2-Nz-5fe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" image="house.fill" catalog="system" id="MZg-l6-70U">
+                        <string key="title">	الرئيسية</string>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YYR-F9-deH">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.050980392159999999" green="0.0039215686269999999" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="j0Y-XB-jpq" kind="relationship" relationship="rootViewController" id="Rei-CN-Lhw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eju-NB-uNa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4916" y="159.60591133004928"/>
+        </scene>
+        <!-- المزيد-->
+        <scene sceneID="VEB-08-xIm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D7N-YN-va4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" image="more" id="xEw-4I-oya">
+                        <string key="title">	المزيد</string>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xab-9y-9Om">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.050980392159999999" green="0.0039215686269999999" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="iYA-l8-9jZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zt6-Db-tZb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1040.8" y="91.625615763546804"/>
         </scene>
     </scenes>
     <resources>
@@ -380,5 +742,6 @@
         <image name="map" width="354" height="157"/>
         <image name="more" width="24" height="6.3333334922790527"/>
         <image name="offers" width="24" height="24"/>
+        <image name="user" width="70" height="70"/>
     </resources>
 </document>
